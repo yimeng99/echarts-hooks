@@ -20,7 +20,10 @@ interface UseEChartReturn {
   resize: () => void;
 }
 
-// 定义容器类型
+/**
+ * 定义容器类型
+ * @typedef {string | HTMLElement | Ref<HTMLElement | null | undefined>} EChartContainer
+ */
 export type EChartContainer = string | HTMLElement | Ref<HTMLElement | null | undefined>;
 
 /**
@@ -39,6 +42,13 @@ function isVueRef(el: any): el is Ref<HTMLElement | null | undefined> {
   return el && typeof el === 'object' && 'value' in el;
 }
 
+/**
+ * 函数重载
+ * @param container DOM 元素
+ * @param options 图表配置项
+ * @param theme 主题
+ */
+export function useEChart(container: HTMLElement, options: EChartsOption, theme?: ThemeType): UseEChartReturn
 
 /**
  * 函数重载
@@ -46,10 +56,19 @@ function isVueRef(el: any): el is Ref<HTMLElement | null | undefined> {
  * @param options 图表配置项
  * @param theme 主题
  */
-function useEChart(container: string, options: EChartsOption, theme?: ThemeType): UseEChartReturn
+export function useEChart(container: string, options: EChartsOption, theme?: ThemeType): UseEChartReturn
 
-function useEChart(container: Ref<HTMLElement>, options: EChartsOption, theme?: ThemeType): UseEChartReturn
-function useEChart(container: EChartContainer, options: ChartOptions, theme?: ThemeType): UseEChartReturn {
+/**
+ * 函数重载
+ * @param container ref 对象
+ * @param options 图表配置项
+ * @param theme 主题
+ */
+export function useEChart(container: Ref<HTMLElement>, options: EChartsOption, theme?: ThemeType): UseEChartReturn
+
+
+
+export function useEChart(container: EChartContainer, options: ChartOptions, theme?: ThemeType): UseEChartReturn {
   const chartInstance = ref<ChartInstance | null>(null);
 
   const _container = ref<HTMLElement | null>(null)
@@ -104,7 +123,7 @@ function useEChart(container: EChartContainer, options: ChartOptions, theme?: Th
     update,
     dispose
   } as UseEChartReturn;
-};
+}
 
-// 创建默认导出
-export default useEChart;
+
+/* 柱状图 */
