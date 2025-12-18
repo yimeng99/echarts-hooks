@@ -1,0 +1,23 @@
+{
+  "name": "@echarts-hooks/docs",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Documentation for ECharts Hooks",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "keywords": [
+    "echarts",
+    "hooks",
+    "documentation",
+    "vitepress"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  }
+}

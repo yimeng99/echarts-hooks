@@ -4,6 +4,8 @@
   "packageManager": "pnpm@8.15.0",
   "scripts": {
     "build": "pnpm -r build",
-    "dev": "pnpm -r dev"
+    "dev": "pnpm -r dev",
+    "docs:dev": "pnpm -F @echarts-hooks/docs dev",
+    "docs:build": "pnpm -F @echarts-hooks/docs build"
   }
 }
