@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # 上传 Vitepress 生成的 dist 目录
-          path: 'echarts-hooks/packages/docs/.vitepress/dist'
+          path: 'packages/docs/.vitepress/dist'
           # 上传 Vitepress 生成的 dist 目录
           # path: 'packages/docs/.vitepress'
       - name: Deploy to GitHub Pages
