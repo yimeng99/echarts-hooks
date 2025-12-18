@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # 上传 Vitepress 生成的 dist 目录
-          path: 'echarts-hooks/packages/docs/.vitepress'
+          path: 'packages/docs/.vitepress'
 #      - name: Upload artifact
 #        uses: actions/upload-pages-artifact@v3
 #        with:
