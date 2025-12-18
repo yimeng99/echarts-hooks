@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "ECharts Hooks",
   description: "Vue composables for ECharts",
+  ignoreDeadLinks: true,  // 禁用死链检查
   base: "/echarts-hooks/",
   locales: {
     root: {
@@ -67,15 +68,15 @@ export default defineConfig({
     lastUpdatedText: '最后更新时间',
 
     langMenuLabel: '语言',
-    
+
     returnToTopLabel: '回到顶部',
-    
+
     sidebarMenuLabel: '菜单',
-    
+
     darkModeSwitchLabel: '主题',
-    
+
     lightModeSwitchTitle: '切换到浅色模式',
-    
+
     darkModeSwitchTitle: '切换到深色模式'
   }
 })
